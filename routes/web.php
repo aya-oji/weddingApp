@@ -31,8 +31,10 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
     Route::middleware('auth:user')->group(function () {
 
         // TOPページ
-        Route::resource('home', 'HomeController', ['only' => 'index']);
+        Route::get('home', 'HomeController@index')->name('index');
 
+        //登録処理
+        Route::post('attendanceRegister', 'HomeController@register')->name('register');
     });
 });
 
