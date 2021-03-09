@@ -44,8 +44,12 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name'     => ['required', 'string', 'max:255'],
+            'sei'     => ['required', 'string', 'max:255'],
+            'mei'     => ['required', 'string', 'max:255'],
+            'sei_kana'     => ['required', 'string', 'max:255'],
+            'mei_kana'     => ['required', 'string', 'max:255'],
             'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone_number' => ['required', 'integer', 'max:11'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -53,10 +57,19 @@ class RegisterController extends Controller
     // 登録処理
     protected function create(array $data)
     {
-        return User::create([
-            'name'     => $data['name'],
-            'email'    => $data['email'],
+        $param = [
+            'sei' => $data['sei'],
+            'mei' => $data['mei'],
+            'sei_kana' => $data['sei_kana'],
+            'mei_kana' => $data['mei_kana'],
+            'email' => $data['email'],
+            'phone_number' => $data['phone_number'],
             'password' => Hash::make($data['password']),
-        ]);
+            'updated_at' => date("Y/m/d H:i:s"),
+        ];
+
+        // TODO
+        // 初回登録時のみcreated_atを登録する処理
+        return User::create($params);
     }
 }

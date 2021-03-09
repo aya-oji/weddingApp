@@ -34,7 +34,7 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
         Route::get('home', 'HomeController@index')->name('index');
 
         //登録処理
-        Route::post('attendanceRegister', 'HomeController@register')->name('register');
+        Route::post('attendanceRegister', 'HomeController@register')->name('attendanceRegister');
     });
 });
 
