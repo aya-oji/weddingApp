@@ -49,7 +49,7 @@ class RegisterController extends Controller
             'sei_kana'     => ['required', 'string', 'max:255'],
             'mei_kana'     => ['required', 'string', 'max:255'],
             'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'phone_number' => ['required', 'integer', 'max:11'],
+            'phone_number' => ['required', 'max:11'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }

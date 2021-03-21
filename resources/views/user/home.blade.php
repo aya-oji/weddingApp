@@ -44,7 +44,7 @@
         </div>
 @endif
         <div clsss='form'>
-            <form action="{{ route('user.register') }}" method='POST'>
+            <form action="{{ route('user.attendanceRegister') }}" method='POST'>
                 <div class='attendance'>
                     <input type='radio' name='attendance' value=’1’>出席
                     <input type='radio' name='attendance' value=’0’>欠席
