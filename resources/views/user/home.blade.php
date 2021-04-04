@@ -1,5 +1,9 @@
 @extends('layouts.user.app')
 
+@section('css')
+    <link href="{{ asset('css/user/home.css') }}" rel="stylesheet">
+@endsection
+
 @section('content')
 
 <div class='main'>
@@ -8,8 +12,11 @@
     <div class='complete-message'>出欠登録が完了しました。回答ありがとうございました。</div>
 @endif
     <section class='contents-main'>
+        <div class='greeting-message'>
+            <div class="greeting-message-title">新郎・新婦からのご挨拶</div>
+            <div class="greeting-message-content">新郎新婦からの挨拶を表示するエリア</div>
+        </div>
         <div class='info'>
-            <div class='greeting-message'>新郎新婦からの挨拶を表示するエリア</div>
             <div class='date'>
                 <div class='date-title'>日程</div>
                 <div class='date-content'>日程を表示するエリア</div>
@@ -22,10 +29,10 @@
                     <span class='location-annotation'>※外部サイトへ遷移します。</span>
                 </div>
             </div>
-            <div clsss='access'>
+            <div class='access'>
                 <div class='access-title'>アクセス</div>
-                <div class='access-content'>
-                    <a href='#' class='access-link'>アクセスはこちら</a>
+                <div class='access-link'>
+                    <a href='#'>アクセスはこちら</a>
                     <span class='access-annotation'>※外部サイトへ遷移します。</span>
                 </div>
             </div>
@@ -43,26 +50,28 @@
             </ul>
         </div>
 @endif
-        <div clsss='form'>
+        <div class='form'>
             <form action="{{ route('user.attendanceRegister') }}" method='POST'>
                 <div class='attendance'>
-                    <input type='radio' name='attendance' value=’1’>出席
-                    <input type='radio' name='attendance' value=’0’>欠席
+                    <input type='radio' name='attendance' value=’1’ id='attendance'><label for='attendance'>出席</label>
+                    <input type='radio' name='attendance' value=’0’ id='absence'><label for='absence'>欠席</label>
                 </div>
                 <div class='allergie'>
-                    <div><lavel for='allergie' class='allergie-title'>アレルギー</lavel></div>
+                    <div class='allergie-title'><lavel for='allergie'>アレルギー</lavel></div>
                     <input type='text' name='allergie' id='allergie' placeholder='乳製品、ナッツ' value=''>
                 </div>
                 <div class='information'>
-                    <div><lavel for='information' class='information-title'>その他、伝えておきたい注意点</lavel></div>
+                    <div class='information-title'><lavel for='information'>その他、伝えておきたい注意点</lavel></div>
                     <textarea name='information' id='information'　placeholder='例）アレルギーではないですが、〇〇が苦手です。'></textarea>
                 </div>
                 <div class='message'>
-                    <div><lavel for='message' class='message-title'>新郎新婦へのメッセージ</lavel></div>
+                    <div class='message-title'><lavel for='message'>新郎新婦へのメッセージ</lavel></div>
                     <textarea name='message' id='message'　placeholder='例）ご結婚おめでとうございます！'></textarea>
                 </div>
                 {{ csrf_field() }}
-                <button class="btn btn-success">回答を登録する</button>
+                <div class='btn-success'>
+                    <button class="btn">回答を登録する</button>
+                </div>
             </form>
         </div>
     </section>

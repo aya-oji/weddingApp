@@ -18,7 +18,6 @@ class HomeController extends Controller
 
     public function index()
     {
-        LOG::debug('処理通った');
         //sessionのIDを元に、登録されている場合はデータを取得してbladeに表示
         return view('user.home');
     }

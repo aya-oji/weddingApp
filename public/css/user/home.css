@@ -1,0 +1,191 @@
+/* 画面全体*/
+.main {
+    text-align: center;
+}
+
+
+/* 登録完了文言 */
+.complete-message {
+    font-size: 13px;
+    color: #CC6633;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    margin: 10px;
+}
+
+
+/* 挨拶 */
+.greeting-message {
+    margin: 5px 20px;
+}
+
+
+/* 情報表示エリア */
+.info {
+    margin: 10px 30px;
+    text-align: left;
+}
+
+/* 日時表示エリア */
+/* 全体 */
+.date {
+    margin-bottom: 10px;
+}
+/* タイトル */
+.date-title {
+    margin-bottom: 5px;
+}
+/* 中身 */
+.date-content {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* 会場表示エリア */
+/* 全体 */
+.location {
+    margin-bottom: 10px;
+}
+/* タイトル */
+.location-title {
+    margin-bottom: 5px;
+}
+/* 中身 */
+.location-content, .location-link {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* リンク */
+.location-annotation {
+    font-size: 10px;
+}
+
+/* アクセス表示エリア */
+/* 全体 */
+.access {
+    margin-bottom: 10px;
+}
+/* タイトル */
+.access-title {
+    margin-bottom: 5px;
+}
+/* 中身 */
+.access-link {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* リンク */
+.access-annotation {
+    font-size: 10px;
+}
+
+/* 期限表示エリア */
+/* 全体 */
+.deadline {
+    margin-bottom: 10px;
+}
+/* タイトル */
+.deadline-title {
+    margin-bottom: 5px;
+}
+/* 中身 */
+.deadline-content {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* フォームエラー表示エリア */
+.errors {
+    font-size: 13px;
+    color: red;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    margin: 10px;
+}
+
+
+/* フォームエリア */
+.form {
+    margin: 10px 30px;
+    text-align: left;
+}
+
+/* 出欠ボタン */
+.attendance {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.attendance label {
+    margin: 5px;
+    border: solid;
+    border-color: #808080;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 5px 20px
+}
+
+input[type="radio"]:checked + label {
+    border-color: #808080;
+    background-color: #FFBEDA;
+}
+
+/* アレルギー入力エリア */
+/* 全体 */
+.allergie {
+    margin-bottom: 10px;
+}
+/* タイトル */
+.allergie-title {
+    margin-bottom: 5px;
+}
+/* テキストボックス */
+#allergie {
+    width: 100%
+}
+
+/* 注意点入力エリア */
+/* 全体 */
+.information {
+    margin-bottom: 10px;
+}
+/* タイトル */
+.information-title {
+    margin-bottom: 5px;
+}
+/* テキストボックス */
+#information {
+    width: 100%
+}
+
+/* メッセージ入力エリア */
+/* 全体 */
+.message {
+    margin-bottom: 10px;
+}
+/* タイトル */
+.message-title {
+    margin-bottom: 5px;
+}
+/* テキストボックス */
+#message {
+    width: 100%
+}
+
+/* 登録ボタン */
+.btn-success {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #FFCC99;
+}
