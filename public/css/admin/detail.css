@@ -1,0 +1,83 @@
+/* 詳細全体 */
+.detail-body{
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #808080;
+    padding: 20px;
+}
+/* 出欠表示 */
+.attendance-body {
+    display: flex;
+    justify-content: center;
+}
+
+.attedance, .absence {
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px 100px;
+}
+.attendance {
+    background-color: #FFC7AF;
+}
+
+.absence {
+    background-color: #B1F9D0;
+}
+
+/* 名前 */
+.name {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.sei, .mei {
+    margin: 5px;
+}
+
+/* アレルギー */
+.allergie {
+    margin: 10px;
+}
+
+.allergie-value {
+    margin-left:20px;
+    margin-right:20px;
+}
+
+/* その他 */
+.important-point {
+    margin: 10px;
+}
+
+.important-point-value {
+    margin-left:20px;
+    margin-right:20px;
+}
+
+/* メッセージ */
+.message {
+    margin: 10px;
+}
+
+.message-value {
+    margin-left:20px;
+    margin-right:20px;
+}
+
+/* 戻るボタン */
+.return-button {
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 5px;
+    padding: 10px 100px;
+    margin-top: 20px;
+    background-color: #CCFFFF;
+}
+
+.return-link {
+    display: flex;
+    justify-content: center;
+}
