@@ -58,6 +58,9 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 
         // 詳細ページ
         Route::get('attendance/{id}', 'HomeController@detail')->name('detail')->where('id', '[0-9]+');
+
+        // csv出力処理
+        Route::get('attendance/putCsv', 'HomeController@putCsv')->name('putCsv');
     });
 
 });

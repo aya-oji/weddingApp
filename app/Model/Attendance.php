@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Attendance extends Model
 {
@@ -12,7 +13,7 @@ class Attendance extends Model
     {
         $attendanceList = DB::table('attendances')
             ->join('users', 'attendances.id', '=', 'users.id')
-            ->select('users.id', 'users.sei', 'users.mei', 'attendances.attendance')
+            ->select('users.id', 'users.sei', 'users.mei', 'users.sei_kana', 'users.mei_kana', 'users.email', 'users.phone_number', 'attendances.attendance', 'attendances.allergies', 'attendances.important_point', 'attendances.message')
             ->get();
 
         return $attendanceList;

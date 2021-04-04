@@ -38,3 +38,18 @@
     font-size: 20px;
     background-color: #FFFFEE;
 }
+
+/* CSV出力ボタン */
+.csv-button {
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 5px;
+    padding: 10px 80px;
+    margin-top: 20px;
+    background-color: #CCFFFF;
+}
+
+.csv-link {
+    display: flex;
+    justify-content: center;
+}

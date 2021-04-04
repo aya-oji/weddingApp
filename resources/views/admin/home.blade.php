@@ -24,6 +24,9 @@
                         </a>
 @endforeach
                     </div>
+                    <div class="csv-button">
+                        <a href="{{route('admin.putCsv')}}" class="csv-link">一覧を出力する</a>
+                    </div>
                 </div>
             </div>
         </div>
