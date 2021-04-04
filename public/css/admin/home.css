@@ -1,0 +1,55 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+
+/* カセット全体 */
+.cassette-body {
+    border: solid 0.5px;
+    display: flex;
+    margin: 2px;
+    padding: 10px;
+}
+
+.attendance {
+    background-color: #FFC7AF;
+}
+
+.absence {
+    background-color: #B1F9D0;
+}
+
+/* カセット内 名前 */
+.name-body {
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+}
+
+.sei, .mei {
+    align-items: center;
+    margin-left: 7px;
+}
+
+/* カセット内 出欠 */
+.attendance-body {
+    margin-left:auto;
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    background-color: #FFFFEE;
+}
+
+/* CSV出力ボタン */
+.csv-button {
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 5px;
+    padding: 10px 80px;
+    margin-top: 20px;
+    background-color: #CCFFFF;
+}
+
+.csv-link {
+    display: flex;
+    justify-content: center;
+}

@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -52,8 +54,13 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     Route::middleware('auth:admin')->group(function () {
 
         // TOPページ
-        Route::resource('home', 'HomeController', ['only' => 'index']);
+        Route::get('home', 'HomeController@index')->name('index');
 
+        // 詳細ページ
+        Route::get('attendance/{id}', 'HomeController@detail')->name('detail')->where('id', '[0-9]+');
+
+        // csv出力処理
+        Route::get('attendance/putCsv', 'HomeController@putCsv')->name('putCsv');
     });
 
 });
